@@ -1,0 +1,95 @@
+<!DECTYPE html>
+
+<html>
+    <head>
+    <meta charset="utf-8">
+
+    <title>Parallax Scrolling Website | vanilla Javascript</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+
+<body>
+    <header>
+
+        <a href="#" class="logo">Logo</a>
+
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+    </header>
+
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front">
+
+    </section>
+
+
+    <div class="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dicta necessitatibus sed id tempore odio ex nostrum placeat quas. Sit minus vero a esse distinctio, natus delectus, illum ducimus Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente id, iste fugit nihil, explicabo a illo maxime optio, tenetur eaque expedita similique aut tempore impedit nemo. Architecto temporibus ration Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod esse ut vero error eligendi voluptas ab tempora, assumenda deserunt eaque? Temporibus, nam, sit? Beatae minima voluptatem consequuntur, in atque quam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam natus suscipit blanditiis, a beatae rerum, autem ad. Itaque sapiente commodi nemo quam voluptate illum, cupiditate modi aut fugiat. Sed, neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis laboriosam vel blanditiis accusantium eius pariatur adipisci voluptas molestias saepe iusto possimus veniam aspernatur reiciendis odit officiis, iste alias ducimus, voluptatem.<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dicta necessitatibus sed id tempore odio ex nostrum placeat quas. Sit minus vero a esse distinctio, natus delectus, illum ducimus Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente id, iste fugit nihil, explicabo a illo maxime optio, tenetur eaque expedita similique aut tempore impedit nemo. Architecto temporibus ration Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod esse ut vero error eligendi voluptas ab tempora, assumenda deserunt eaque? Temporibus, nam, sit? Beatae minima voluptatem consequuntur, in atque quam? Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dicta necessitatibus sed id tempore odio ex nostrum placeat quas. Sit minus vero a esse distinctio, natus delectus, illum ducimus Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente id, iste fugit nihil, explicabo a illo maxime optio, tenetur eaque expedita similique aut tempore impedit nemo. Architecto temporibus ration Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod esse ut vero error eligendi voluptas ab tempora, assumenda deserunt eaque? Temporibus, nam, sit? Beatae minima voluptatem consequuntur, in atque quam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam natus suscipit blanditiis, a beatae rerum, autem ad. Itaque sapiente commodi nemo quam voluptate illum, cupiditate modi aut fugiat. Sed, neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis laboriosam vel blanditiis accusantium eius pariatur adipisci voluptas molestias saepe iusto possimus veniam aspernatur reiciendis odit officiis, iste alias ducimus, voluptatem.<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dicta necessitatibus sed id tempore odio ex nostrum placeat quas. Sit minus vero a esse distinctio, natus delectus, illum ducimus Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente id, iste fugit nihil, explicabo a illo maxime optio, tenetur eaque expedita similique aut tempore impedit nemo. Architecto temporibus ration Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod esse ut vero error eligendi voluptas ab tempora, assumenda deserunt eaque? Temporibus, nam, sit? Beatae minima voluptatem consequuntur, in atque quam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam natus suscipit blanditiis, a beatae rerum, autem ad. Itaque sapiente commodi nemo quam voluptate illum, cupiditate modi aut fugiat. Sed, neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis laboriosam vel blanditiis accusantium eius pariatur adipisci voluptas molestias saepe iusto possimus veniam aspernatur reiciendis odit officiis, iste alias ducimus, voluptatem.
+            
+        </p>
+
+
+    </div>
+    
+    /* PARALLEX EFFECT */
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+        
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            
+            stars.style.left = value * 0.25 + 'px';
+            
+            moon.style.top = value * 1.05 + 'px';
+            
+            mountains_behind.style.top = value * 0.75 + 'px';
+            
+            mountains_front.style.left = value * 0 + 'px'; /* wann't to be scroll */
+            
+            text.style.marginRight = value * 4 + 'px'; /*<!--text deal with number value , we trager margin value.-->*/
+            text.style.marginTop = value * 1.5 + 'px'; /* to make cross effect with btn */
+            
+            btn.style.marginTop = value * 1.5 + 'px';
+            
+            header.style.top = value * 0.5 + 'px';
+        })
+        
+    
+    </script>
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
